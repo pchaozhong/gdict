@@ -1,0 +1,133 @@
+<html>
+<head>
+	<link href="/style.css" media="screen" rel="stylesheet" type="text/css"/> 
+	<style>
+		html, body {padding: 0; margin: 0}
+		.header{ background: #000; padding: 10px; color: #fff; }
+		.header a{ color: #ccc;  }
+		.code { padding: 10px}
+		.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #808080 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0040D0 } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+	</style>
+</head>
+<body>
+<div class="header">
+	<b>Android source code : version at 22/02/2011</b></br>
+	Hosted by <a href="http://www.frandroid.com/">FrAndroid</a>, french Android and mobile blog<br/>
+	<a href="/">[Index]</a> <a href="http://developer.android.com/">[android.com]</a>
+</div>
+
+<div class="code">
+<h1>/frameworks/base/media/jni/audioeffect/Android.mk</h1><a href="/frameworks/base/media/jni/audioeffect/">[Parent]</a><div class="highlight"><pre><span class="nv">LOCAL_PATH</span><span class="o">:=</span> <span class="k">$(</span>call my-dir<span class="k">)</span>
+<span class="cp">include $(CLEAR_VARS)</span>
+
+LOCAL_SRC_FILES:<span class="o">=</span> <span class="se">\</span>
+	android_media_AudioEffect.cpp <span class="se">\</span>
+	android_media_Visualizer.cpp
+
+LOCAL_SHARED_LIBRARIES :<span class="o">=</span> <span class="se">\</span>
+	libcutils <span class="se">\</span>
+	libutils <span class="se">\</span>
+	libandroid_runtime <span class="se">\</span>
+	libnativehelper <span class="se">\</span>
+	libmedia
+
+LOCAL_C_INCLUDES :<span class="o">=</span> <span class="se">\</span>
+	system/media/audio_effects/include
+
+LOCAL_MODULE:<span class="o">=</span> libaudioeffect_jni
+
+<span class="cp">include $(BUILD_SHARED_LIBRARY)</span>
+</pre></div>
+</pre></div>
+
+<div style="text-align: center; margin: 10px;">
+<form action="http://www.google.com/cse" id="cse-search-box">
+        <div>
+        <center>
+        <input type="hidden" name="cx" value="012324609772651831024:a0t4fswrhoy"/>
+        <input type="hidden" name="ie" value="UTF-8"/>
+        <input type="text" name="q" size="21"/>
+        <input type="submit" name="sa" value="Rechercher"/>
+        </center>
+</div>
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=fr"></script>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5414263-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</div>
+</body>
+</html>
